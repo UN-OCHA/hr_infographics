@@ -1,9 +1,14 @@
 name = Infographics
 core = 7.x
 package = Humanitarianresponse
-dependencies[] = entityreference
+dependencies[] = better_exposed_filters
+dependencies[] = entity
 dependencies[] = hr_documents
-dependencies[] = views_content
+dependencies[] = views
+dependencies[] = views_data_export
+features[context][] = hr_infographics_space
+features[context][] = hr_infographics_space_table
+features[ctools][] = context:context:3
 features[ctools][] = feeds:feeds_importer_default:1
 features[ctools][] = panelizer:panelizer:1
 features[ctools][] = strongarm:strongarm:1
