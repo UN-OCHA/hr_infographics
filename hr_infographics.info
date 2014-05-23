@@ -82,6 +82,7 @@ features[variable][] = node_submitted_hr_infographic
 features[variable][] = panelizer_defaults_node_hr_infographic
 features[variable][] = panelizer_node:hr_infographic_allowed_layouts_default
 features[variable][] = panelizer_node:hr_infographic_default
+features[variable][] = pathauto_node_hr_infographic_pattern
 features[views_view][] = hr_infographics
 features[views_view][] = hr_infographics_panes
 features_exclude[dependencies][features] = features
