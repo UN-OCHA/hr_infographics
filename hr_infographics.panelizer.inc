@@ -45,20 +45,20 @@ function hr_infographics_panelizer_defaults() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-79ca7eac-2616-4734-a284-7489918bc739';
+    $pane->pid = 'new-88ee6379-8f3e-47e0-a402-bb29694876a9';
     $pane->panel = 'contentmain';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:title_field';
+    $pane->type = 'node_title';
+    $pane->subtype = 'node_title';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'above',
-      'formatter' => 'hidden',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
+      'link' => 0,
+      'markup' => 'h2',
+      'id' => '',
+      'class' => '',
       'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -68,9 +68,9 @@ function hr_infographics_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '79ca7eac-2616-4734-a284-7489918bc739';
-    $display->content['new-79ca7eac-2616-4734-a284-7489918bc739'] = $pane;
-    $display->panels['contentmain'][0] = 'new-79ca7eac-2616-4734-a284-7489918bc739';
+    $pane->uuid = '88ee6379-8f3e-47e0-a402-bb29694876a9';
+    $display->content['new-88ee6379-8f3e-47e0-a402-bb29694876a9'] = $pane;
+    $display->panels['contentmain'][0] = 'new-88ee6379-8f3e-47e0-a402-bb29694876a9';
     $pane = new stdClass();
     $pane->pid = 'new-f3b49e1f-c08e-4629-9bfb-11e58d8dcb6b';
     $pane->panel = 'contentmain';
@@ -333,7 +333,7 @@ function hr_infographics_panelizer_defaults() {
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'format_type' => 'long',
+        'format_type' => 'hr_1',
         'multiple_number' => '',
         'multiple_from' => '',
         'multiple_to' => '',
@@ -341,6 +341,8 @@ function hr_infographics_panelizer_defaults() {
         'show_repeat_rule' => 'show',
       ),
       'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -605,13 +607,17 @@ function hr_infographics_panelizer_defaults() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'above',
-      'formatter' => 'hidden',
-      'delta_limit' => 0,
+      'label' => 'inline',
+      'formatter' => 'entityreference_label',
+      'delta_limit' => '0',
       'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
+      'delta_reversed' => 0,
+      'formatter_settings' => array(
+        'link' => 0,
+      ),
       'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -632,13 +638,22 @@ function hr_infographics_panelizer_defaults() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'above',
-      'formatter' => 'hidden',
+      'label' => 'inline',
+      'formatter' => 'date_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
+      'formatter_settings' => array(
+        'format_type' => 'hr_1',
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_to' => '',
+        'fromto' => 'both',
+        'show_repeat_rule' => 'show',
+      ),
       'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -659,13 +674,17 @@ function hr_infographics_panelizer_defaults() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'above',
-      'formatter' => 'hidden',
+      'label' => 'inline',
+      'formatter' => 'entityreference_label',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
+      'formatter_settings' => array(
+        'link' => 0,
+      ),
       'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
