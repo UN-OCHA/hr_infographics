@@ -223,7 +223,6 @@ Relevance Desc|Least relevant',
 
   /* Display: Table */
   $handler = $view->new_display('page', 'Table', 'table');
-  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -285,7 +284,7 @@ Relevance Desc|Least relevant',
       'filter' => array(),
     ),
   );
-  $handler->display->display_options['path'] = 'node/%/infograhics/table';
+  $handler->display->display_options['path'] = 'node/%/infographics/table';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Table';
   $handler->display->display_options['menu']['weight'] = '2';
