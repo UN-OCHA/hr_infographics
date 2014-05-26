@@ -223,6 +223,7 @@ Relevance Desc|Least relevant',
 
   /* Display: Table */
   $handler = $view->new_display('page', 'Table', 'table');
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
