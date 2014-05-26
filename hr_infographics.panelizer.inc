@@ -87,7 +87,10 @@ function hr_infographics_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'col-md-3',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
@@ -126,19 +129,21 @@ function hr_infographics_panelizer_defaults() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'above',
-      'formatter' => 'field_collection_view',
-      'delta_limit' => 0,
+      'label' => 'hidden',
+      'formatter' => 'field_collection_fields',
+      'delta_limit' => '0',
       'delta_offset' => '0',
-      'delta_reversed' => FALSE,
+      'delta_reversed' => 0,
       'formatter_settings' => array(
         'edit' => 'Edit',
         'delete' => 'Delete',
         'add' => 'Add',
-        'description' => TRUE,
+        'description' => 1,
         'view_mode' => 'full',
       ),
       'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
