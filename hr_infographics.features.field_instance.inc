@@ -1049,9 +1049,9 @@ function hr_infographics_field_default_field_instances() {
   t('Locations');
   t('Name');
   t('Organization');
-  t('Primary space');
   t('Publication Date');
   t('Related content');
+  t('Space(s)');
   t('Themes');
   t('Title');
   t('Type');
