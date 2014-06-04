@@ -79,7 +79,7 @@ Relevance Desc|Least relevant',
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'There are no results';
   $handler->display->display_options['empty']['area']['format'] = 'plain_text';
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Node: Name */
   $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
   $handler->display->display_options['fields']['title_field']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['title_field']['field'] = 'title_field';
@@ -96,7 +96,7 @@ Relevance Desc|Least relevant',
   $handler->display->display_options['fields']['field_infographic_type']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_infographic_type']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_infographic_type']['bypass_access'] = 0;
-  /* Field: Indexed Node: Organization */
+  /* Field: Indexed Node: Lead Agencies */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
@@ -297,7 +297,7 @@ Relevance Desc|Least relevant',
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Node: Name */
   $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
   $handler->display->display_options['fields']['title_field']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['title_field']['field'] = 'title_field';
@@ -314,7 +314,7 @@ Relevance Desc|Least relevant',
   $handler->display->display_options['fields']['field_infographic_type']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_infographic_type']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_infographic_type']['bypass_access'] = 0;
-  /* Field: Indexed Node: Organization */
+  /* Field: Indexed Node: Lead Agencies */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
@@ -366,9 +366,9 @@ Relevance Desc|Least relevant',
     t('next ›'),
     t('last »'),
     t('There are no results'),
-    t('Title'),
+    t('Name'),
     t('Type'),
-    t('Organization'),
+    t('Lead Agencies'),
     t('Publication Date'),
     t('Files'),
     t('Relevance'),
@@ -449,7 +449,7 @@ Relevance Desc|Least relevant',
   $handler->display->display_options['sorts']['title_field_value']['field'] = 'title_field_value';
   $handler->display->display_options['sorts']['title_field_value']['exposed'] = TRUE;
   $handler->display->display_options['sorts']['title_field_value']['expose']['label'] = 'Title';
-  /* Contextual filter: Content: Groups audience (og_group_ref) */
+  /* Contextual filter: Content: Space(s) (og_group_ref) */
   $handler->display->display_options['arguments']['og_group_ref_target_id']['id'] = 'og_group_ref_target_id';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['table'] = 'og_membership';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['field'] = 'og_group_ref_target_id';
@@ -493,7 +493,7 @@ Relevance Desc|Least relevant',
     'hr_infographic' => 'hr_infographic',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Groups audience (og_group_ref) */
+  /* Filter criterion: Content: Space(s) (og_group_ref) */
   $handler->display->display_options['filters']['og_group_ref_target_id']['id'] = 'og_group_ref_target_id';
   $handler->display->display_options['filters']['og_group_ref_target_id']['table'] = 'og_membership';
   $handler->display->display_options['filters']['og_group_ref_target_id']['field'] = 'og_group_ref_target_id';
@@ -688,7 +688,7 @@ Relevance Desc|Least relevant',
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Groups audience */
+  /* Field: Content: Space(s) */
   $handler->display->display_options['fields']['og_group_ref']['id'] = 'og_group_ref';
   $handler->display->display_options['fields']['og_group_ref']['table'] = 'og_membership';
   $handler->display->display_options['fields']['og_group_ref']['field'] = 'og_group_ref';
