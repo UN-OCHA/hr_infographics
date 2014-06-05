@@ -96,7 +96,7 @@ Relevance Desc|Least relevant',
   $handler->display->display_options['fields']['field_infographic_type']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_infographic_type']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_infographic_type']['bypass_access'] = 0;
-  /* Field: Indexed Node: Lead Agencies */
+  /* Field: Indexed Node: Organizations */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
@@ -136,7 +136,7 @@ Relevance Desc|Least relevant',
   $handler->display->display_options['sorts']['search_api_relevance']['field'] = 'search_api_relevance';
   $handler->display->display_options['sorts']['search_api_relevance']['exposed'] = TRUE;
   $handler->display->display_options['sorts']['search_api_relevance']['expose']['label'] = 'Relevance';
-  /* Contextual filter: Indexed Node: Groups audience */
+  /* Contextual filter: Indexed Node: Space(s) */
   $handler->display->display_options['arguments']['og_group_ref']['id'] = 'og_group_ref';
   $handler->display->display_options['arguments']['og_group_ref']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['og_group_ref']['field'] = 'og_group_ref';
@@ -314,7 +314,7 @@ Relevance Desc|Least relevant',
   $handler->display->display_options['fields']['field_infographic_type']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_infographic_type']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_infographic_type']['bypass_access'] = 0;
-  /* Field: Indexed Node: Lead Agencies */
+  /* Field: Indexed Node: Organizations */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
@@ -368,7 +368,7 @@ Relevance Desc|Least relevant',
     t('There are no results'),
     t('Title'),
     t('Type'),
-    t('Lead Agencies'),
+    t('Organizations'),
     t('Publication Date'),
     t('Files'),
     t('Relevance'),
