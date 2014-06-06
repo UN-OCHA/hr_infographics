@@ -414,22 +414,6 @@ Relevance Desc|Least relevant',
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Field collection item: File */
-  $handler->display->display_options['fields']['field_file']['id'] = 'field_file';
-  $handler->display->display_options['fields']['field_file']['table'] = 'field_data_field_file';
-  $handler->display->display_options['fields']['field_file']['field'] = 'field_file';
-  $handler->display->display_options['fields']['field_file']['relationship'] = 'field_files_collection_value';
-  $handler->display->display_options['fields']['field_file']['label'] = '';
-  $handler->display->display_options['fields']['field_file']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_file']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_file']['type'] = 'pdfpreview';
-  $handler->display->display_options['fields']['field_file']['settings'] = array(
-    'image_style' => 'thumbnail',
-    'image_link' => 'content',
-    'show_description' => 0,
-    'tag' => 'span',
-    'fallback_formatter' => 0,
-  );
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -475,6 +459,15 @@ Relevance Desc|Least relevant',
 
   /* Display: List */
   $handler = $view->new_display('panel_pane', 'List', 'list');
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'custom_url';
+  $handler->display->display_options['link_url'] = 'search';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -613,7 +606,7 @@ Relevance Desc|Least relevant',
   $handler->display->display_options['allow']['path_override'] = 0;
   $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
-  $handler->display->display_options['allow']['fields_override'] = 'fields_override';
+  $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
     'og_group_ref_target_id' => array(
       'type' => 'context',
