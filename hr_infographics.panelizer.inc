@@ -841,7 +841,34 @@ function hr_infographics_panelizer_defaults() {
     $pane->uuid = '4621a4fd-eefb-4530-9655-0d43a517d0c7';
     $display->content['new-4621a4fd-eefb-4530-9655-0d43a517d0c7'] = $pane;
     $display->panels['contentmain'][0] = 'new-4621a4fd-eefb-4530-9655-0d43a517d0c7';
-  $display->hide_title = PANELS_TITLE_FIXED;
+    $pane = new stdClass();
+    $pane->pid = 'new-c1ad3fcb-9446-4980-ba65-b028af7af09e';
+    $pane->panel = 'contentmain';
+    $pane->type = 'node_title';
+    $pane->subtype = 'node_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'link' => 1,
+      'markup' => 'none',
+      'id' => '',
+      'class' => '',
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'c1ad3fcb-9446-4980-ba65-b028af7af09e';
+    $display->content['new-c1ad3fcb-9446-4980-ba65-b028af7af09e'] = $pane;
+    $display->panels['contentmain'][1] = 'new-c1ad3fcb-9446-4980-ba65-b028af7af09e';
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $panelizer->display = $display;
   $export['node:hr_infographic:default:teaser'] = $panelizer;
