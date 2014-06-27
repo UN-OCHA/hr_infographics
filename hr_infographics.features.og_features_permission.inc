@@ -33,6 +33,7 @@ function hr_infographics_og_features_default_permissions() {
   // Exported og permission: 'node:hr_bundle:create hr_infographic content'
   $permissions['node:hr_bundle:create hr_infographic content'] = array(
     'roles' => array(
+      'contributor' => 'contributor',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -49,6 +50,7 @@ function hr_infographics_og_features_default_permissions() {
   // Exported og permission: 'node:hr_bundle:delete own hr_infographic content'
   $permissions['node:hr_bundle:delete own hr_infographic content'] = array(
     'roles' => array(
+      'contributor' => 'contributor',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -65,6 +67,7 @@ function hr_infographics_og_features_default_permissions() {
   // Exported og permission: 'node:hr_bundle:update own hr_infographic content'
   $permissions['node:hr_bundle:update own hr_infographic content'] = array(
     'roles' => array(
+      'contributor' => 'contributor',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -102,6 +105,7 @@ function hr_infographics_og_features_default_permissions() {
   $permissions['node:hr_operation:create hr_infographic content'] = array(
     'roles' => array(
       'bundle member' => 'bundle member',
+      'contributor' => 'contributor',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -120,6 +124,7 @@ function hr_infographics_og_features_default_permissions() {
   $permissions['node:hr_operation:delete own hr_infographic content'] = array(
     'roles' => array(
       'bundle member' => 'bundle member',
+      'contributor' => 'contributor',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -138,6 +143,7 @@ function hr_infographics_og_features_default_permissions() {
   $permissions['node:hr_operation:update own hr_infographic content'] = array(
     'roles' => array(
       'bundle member' => 'bundle member',
+      'contributor' => 'contributor',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -174,6 +180,7 @@ function hr_infographics_og_features_default_permissions() {
   // Exported og permission: 'node:hr_sector:create hr_infographic content'
   $permissions['node:hr_sector:create hr_infographic content'] = array(
     'roles' => array(
+      'contributor' => 'contributor',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -190,6 +197,7 @@ function hr_infographics_og_features_default_permissions() {
   // Exported og permission: 'node:hr_sector:delete own hr_infographic content'
   $permissions['node:hr_sector:delete own hr_infographic content'] = array(
     'roles' => array(
+      'contributor' => 'contributor',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -206,6 +214,7 @@ function hr_infographics_og_features_default_permissions() {
   // Exported og permission: 'node:hr_sector:update own hr_infographic content'
   $permissions['node:hr_sector:update own hr_infographic content'] = array(
     'roles' => array(
+      'contributor' => 'contributor',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -242,6 +251,7 @@ function hr_infographics_og_features_default_permissions() {
   // Exported og permission: 'node:hr_space:create hr_infographic content'
   $permissions['node:hr_space:create hr_infographic content'] = array(
     'roles' => array(
+      'contributor' => 'contributor',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -250,6 +260,7 @@ function hr_infographics_og_features_default_permissions() {
   // Exported og permission: 'node:hr_space:delete any hr_infographic content'
   $permissions['node:hr_space:delete any hr_infographic content'] = array(
     'roles' => array(
+      'contributor' => 'contributor',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -258,6 +269,7 @@ function hr_infographics_og_features_default_permissions() {
   // Exported og permission: 'node:hr_space:delete own hr_infographic content'
   $permissions['node:hr_space:delete own hr_infographic content'] = array(
     'roles' => array(
+      'contributor' => 'contributor',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -274,6 +286,7 @@ function hr_infographics_og_features_default_permissions() {
   // Exported og permission: 'node:hr_space:update own hr_infographic content'
   $permissions['node:hr_space:update own hr_infographic content'] = array(
     'roles' => array(
+      'contributor' => 'contributor',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
