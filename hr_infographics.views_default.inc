@@ -160,7 +160,7 @@ Relevance Desc|Least relevant',
   $handler->display->display_options['filters']['search_api_views_fulltext']['field'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['exposed'] = TRUE;
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator_id'] = 'search_api_views_fulltext_op';
-  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['label'] = 'Search Documents';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['label'] = 'Search Maps/Infographics';
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator'] = 'search_api_views_fulltext_op';
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['identifier'] = 'search';
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['remember_roles'] = array(
@@ -321,7 +321,7 @@ Relevance Desc|Least relevant',
     t('Files'),
     t('Relevance'),
     t('All'),
-    t('Search Documents'),
+    t('Search Maps/Infographics'),
     t('List'),
     t('Table'),
     t('CSV'),
