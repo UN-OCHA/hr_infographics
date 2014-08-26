@@ -37,6 +37,9 @@ function hr_infographics_strongarm() {
         'redirect' => array(
           'weight' => '18',
         ),
+        'language' => array(
+          'weight' => '-10',
+        ),
       ),
       'display' => array(),
     ),
