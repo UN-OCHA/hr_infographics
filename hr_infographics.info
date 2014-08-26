@@ -108,6 +108,7 @@ features[taxonomy][] = hr_infographic_type
 features[user_permission][] = create fieldable hr_infographics
 features[user_permission][] = delete fieldable hr_infographics
 features[user_permission][] = edit fieldable hr_infographics
+features[variable][] = entity_translation_settings_node__hr_infographic
 features[variable][] = field_bundle_settings_node__hr_infographic
 features[variable][] = language_content_type_hr_infographic
 features[variable][] = menu_options_hr_infographic
