@@ -74,3 +74,24 @@ function hr_infographics_entity_info_alter(&$entity_info) {
   );
 }
 
+/**
+ * Implements hook_search_api_views_query_alter()
+ *
+ * Makes the infographics view available for disasters
+ */
+function hr_infographics_search_api_views_query_alter(&$view, &$query) {
+  if ($view->name == 'hr_infographics') {
+    foreach ($query->where as &$condition_group) {
+      foreach ($condition_group['conditions'] as &$condition) {
+        if (reset($condition) == 'og_group_ref') {
+          $nid = $condition[1];
+          $node = node_load($nid);
+          if ($node->type == 'hr_disaster') {
+            $condition = array('field_disasters', $nid, '=');
+          }
+        }
+      }
+    }
+  }
+}
+
