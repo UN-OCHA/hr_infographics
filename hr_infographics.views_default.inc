@@ -486,26 +486,32 @@ function hr_infographics_views_default_views() {
     147444660 => 0,
   );
   $handler->display->display_options['filters']['field_themes_target_id_entityreference_filter']['reference_display'] = 'hr_themes:entityreference_1';
-  /* Filter criterion: Content: Type (field_infographic_type) */
-  $handler->display->display_options['filters']['field_infographic_type_target_id']['id'] = 'field_infographic_type_target_id';
-  $handler->display->display_options['filters']['field_infographic_type_target_id']['table'] = 'field_data_field_infographic_type';
-  $handler->display->display_options['filters']['field_infographic_type_target_id']['field'] = 'field_infographic_type_target_id';
-  $handler->display->display_options['filters']['field_infographic_type_target_id']['group'] = 1;
-  $handler->display->display_options['filters']['field_infographic_type_target_id']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_infographic_type_target_id']['expose']['operator_id'] = 'field_infographic_type_target_id_op';
-  $handler->display->display_options['filters']['field_infographic_type_target_id']['expose']['label'] = 'Type';
-  $handler->display->display_options['filters']['field_infographic_type_target_id']['expose']['operator'] = 'field_infographic_type_target_id_op';
-  $handler->display->display_options['filters']['field_infographic_type_target_id']['expose']['identifier'] = 'field_infographic_type_target_id';
-  $handler->display->display_options['filters']['field_infographic_type_target_id']['expose']['remember_roles'] = array(
+  /* Filter criterion: Content: Type (field_infographic_type) (reference filter) */
+  $handler->display->display_options['filters']['field_infographic_type_target_id_entityreference_filter']['id'] = 'field_infographic_type_target_id_entityreference_filter';
+  $handler->display->display_options['filters']['field_infographic_type_target_id_entityreference_filter']['table'] = 'field_data_field_infographic_type';
+  $handler->display->display_options['filters']['field_infographic_type_target_id_entityreference_filter']['field'] = 'field_infographic_type_target_id_entityreference_filter';
+  $handler->display->display_options['filters']['field_infographic_type_target_id_entityreference_filter']['group'] = 1;
+  $handler->display->display_options['filters']['field_infographic_type_target_id_entityreference_filter']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_infographic_type_target_id_entityreference_filter']['expose']['operator_id'] = 'field_infographic_type_target_id_entityreference_filter_op';
+  $handler->display->display_options['filters']['field_infographic_type_target_id_entityreference_filter']['expose']['label'] = 'Type';
+  $handler->display->display_options['filters']['field_infographic_type_target_id_entityreference_filter']['expose']['operator'] = 'field_infographic_type_target_id_entityreference_filter_op';
+  $handler->display->display_options['filters']['field_infographic_type_target_id_entityreference_filter']['expose']['identifier'] = 'field_infographic_type_target_id_entityreference_filter';
+  $handler->display->display_options['filters']['field_infographic_type_target_id_entityreference_filter']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     30037204 => 0,
+    200153887 => 0,
+    188284353 => 0,
+    235660466 => 0,
+    229782242 => 0,
+    147444660 => 0,
   );
-  $handler->display->display_options['filters']['field_infographic_type_target_id']['shs_enabled'] = 0;
+  $handler->display->display_options['filters']['field_infographic_type_target_id_entityreference_filter']['reference_display'] = 'hr_infographics_types:entityreference_1';
   /* Filter criterion: Content: Funding methods (field_funding_methods) (reference filter) */
   $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['id'] = 'field_funding_methods_target_id_entityreference_filter';
   $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['table'] = 'field_data_field_funding_methods';
   $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['field'] = 'field_funding_methods_target_id_entityreference_filter';
+  $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['group'] = 1;
   $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['expose']['operator_id'] = 'field_funding_methods_target_id_entityreference_filter_op';
   $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['expose']['label'] = 'Funding methods';
@@ -662,6 +668,79 @@ function hr_infographics_views_default_views() {
     t('[title] ([og_group_ref])'),
   );
   $export['hr_infographics_panes'] = $view;
+
+  $view = new view();
+  $view->name = 'hr_infographics_types';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'taxonomy_term_data';
+  $view->human_name = 'Infographics Types';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+  /* Sort criterion: Taxonomy term: Name */
+  $handler->display->display_options['sorts']['name']['id'] = 'name';
+  $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['name']['field'] = 'name';
+  /* Filter criterion: Taxonomy vocabulary: Machine name */
+  $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['value'] = array(
+    'hr_infographic_type' => 'hr_infographic_type',
+  );
+
+  /* Display: Entity Reference */
+  $handler = $view->new_display('entityreference', 'Entity Reference', 'entityreference_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'entityreference_style';
+  $handler->display->display_options['style_options']['search_fields'] = array(
+    'name' => 'name',
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entityreference_fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $translatables['hr_infographics_types'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('Entity Reference'),
+  );
+  $export['hr_infographics_types'] = $view;
 
   return $export;
 }
