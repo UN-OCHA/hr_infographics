@@ -52,7 +52,6 @@ features[field_instance][] = node-hr_infographic-field_coordination_hubs
 features[field_instance][] = node-hr_infographic-field_disasters
 features[field_instance][] = node-hr_infographic-field_files_collection
 features[field_instance][] = node-hr_infographic-field_funding_methods
-features[field_instance][] = node-hr_infographic-field_funding_types
 features[field_instance][] = node-hr_infographic-field_infographic_type
 features[field_instance][] = node-hr_infographic-field_locations
 features[field_instance][] = node-hr_infographic-field_organizations
