@@ -506,6 +506,37 @@ function hr_infographics_panelizer_defaults() {
     $display->content['new-ff07b1f1-3d78-4e5b-a839-834b58abe87f'] = $pane;
     $display->panels['sidebar'][9] = 'new-ff07b1f1-3d78-4e5b-a839-834b58abe87f';
     $pane = new stdClass();
+    $pane->pid = 'new-a58bec3d-c7bb-4ee2-b11f-f59a1ae2d26e';
+    $pane->panel = 'sidebar';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_fundings';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'above',
+      'formatter' => 'entityreference_label',
+      'delta_limit' => '0',
+      'delta_offset' => '0',
+      'delta_reversed' => 0,
+      'formatter_settings' => array(
+        'link' => 0,
+      ),
+      'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 10;
+    $pane->locks = array();
+    $pane->uuid = 'a58bec3d-c7bb-4ee2-b11f-f59a1ae2d26e';
+    $display->content['new-a58bec3d-c7bb-4ee2-b11f-f59a1ae2d26e'] = $pane;
+    $display->panels['sidebar'][10] = 'new-a58bec3d-c7bb-4ee2-b11f-f59a1ae2d26e';
+    $pane = new stdClass();
     $pane->pid = 'new-4409f83f-ec67-4d0c-9f36-6c04ed569eab';
     $pane->panel = 'sidebar';
     $pane->type = 'entity_field';
