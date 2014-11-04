@@ -83,15 +83,6 @@ function hr_infographics_views_default_views() {
   $handler->display->display_options['fields']['field_files_collection']['display'] = 'view';
   $handler->display->display_options['fields']['field_files_collection']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_files_collection']['bypass_access'] = 0;
-  /* Sort criterion: Indexed Node: Publication Date */
-  $handler->display->display_options['sorts']['field_publication_date']['id'] = 'field_publication_date';
-  $handler->display->display_options['sorts']['field_publication_date']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['sorts']['field_publication_date']['field'] = 'field_publication_date';
-  $handler->display->display_options['sorts']['field_publication_date']['order'] = 'DESC';
-  /* Sort criterion: Search: Relevance */
-  $handler->display->display_options['sorts']['search_api_relevance']['id'] = 'search_api_relevance';
-  $handler->display->display_options['sorts']['search_api_relevance']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['sorts']['search_api_relevance']['field'] = 'search_api_relevance';
   /* Contextual filter: Indexed Node: Space(s) */
   $handler->display->display_options['arguments']['og_group_ref']['id'] = 'og_group_ref';
   $handler->display->display_options['arguments']['og_group_ref']['table'] = 'search_api_index_default_node_index';
@@ -152,21 +143,19 @@ function hr_infographics_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
     'title_field' => 'title_field',
-    'field_document_type' => 'field_document_type',
+    'field_infographic_type' => 'field_infographic_type',
     'field_organizations' => 'field_organizations',
     'field_publication_date' => 'field_publication_date',
     'field_files_collection' => 'field_files_collection',
   );
-  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['default'] = 'field_publication_date';
   $handler->display->display_options['style_options']['info'] = array(
     'title_field' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_document_type' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
+    'field_infographic_type' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -177,8 +166,8 @@ function hr_infographics_views_default_views() {
       'empty_column' => 0,
     ),
     'field_publication_date' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
+      'sortable' => 1,
+      'default_sort_order' => 'desc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
