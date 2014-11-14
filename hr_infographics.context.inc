@@ -99,6 +99,12 @@ function hr_infographics_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '0',
         ),
+        'facetapi-ufw6LRur6Vw9VcpuZ4VayzbcSrlX1VMS' => array(
+          'module' => 'facetapi',
+          'delta' => 'ufw6LRur6Vw9VcpuZ4VayzbcSrlX1VMS',
+          'region' => 'sidebar_first',
+          'weight' => '1',
+        ),
       ),
     ),
   );
@@ -191,6 +197,12 @@ function hr_infographics_context_default_contexts() {
           'delta' => '9ew5LitJZ6pWU71gbHp1XW9oAOBwV11z',
           'region' => 'sidebar_first',
           'weight' => '0',
+        ),
+        'facetapi-ufw6LRur6Vw9VcpuZ4VayzbcSrlX1VMS' => array(
+          'module' => 'facetapi',
+          'delta' => 'ufw6LRur6Vw9VcpuZ4VayzbcSrlX1VMS',
+          'region' => 'sidebar_first',
+          'weight' => '1',
         ),
       ),
     ),
