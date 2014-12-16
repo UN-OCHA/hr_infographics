@@ -298,11 +298,6 @@ function hr_infographics_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Content: File(s) (field_files_collection) */
-  $handler->display->display_options['relationships']['field_files_collection_value']['id'] = 'field_files_collection_value';
-  $handler->display->display_options['relationships']['field_files_collection_value']['table'] = 'field_data_field_files_collection';
-  $handler->display->display_options['relationships']['field_files_collection_value']['field'] = 'field_files_collection_value';
-  $handler->display->display_options['relationships']['field_files_collection_value']['delta'] = '0';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -319,10 +314,6 @@ function hr_infographics_views_default_views() {
   $handler->display->display_options['sorts']['field_publication_date_value']['id'] = 'field_publication_date_value';
   $handler->display->display_options['sorts']['field_publication_date_value']['table'] = 'field_data_field_publication_date';
   $handler->display->display_options['sorts']['field_publication_date_value']['field'] = 'field_publication_date_value';
-  /* Sort criterion: Field: Title (title_field) */
-  $handler->display->display_options['sorts']['title_field_value']['id'] = 'title_field_value';
-  $handler->display->display_options['sorts']['title_field_value']['table'] = 'field_data_title_field';
-  $handler->display->display_options['sorts']['title_field_value']['field'] = 'title_field_value';
   /* Contextual filter: Content: Space(s) (og_group_ref) */
   $handler->display->display_options['arguments']['og_group_ref_target_id']['id'] = 'og_group_ref_target_id';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['table'] = 'og_membership';
@@ -638,7 +629,6 @@ function hr_infographics_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('field collection item from field_files_collection'),
     t('All'),
     t('List'),
     t('Space'),
@@ -652,6 +642,7 @@ function hr_infographics_views_default_views() {
     t('Infographics per space'),
     t('Infographics'),
     t('Thumbnail'),
+    t('field collection item from field_files_collection'),
     t('View panes'),
     t('Entity Reference'),
     t('[title] ([og_group_ref])'),
