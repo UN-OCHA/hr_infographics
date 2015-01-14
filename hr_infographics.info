@@ -56,6 +56,7 @@ features[field_instance][] = node-hr_infographic-field_themes
 features[field_instance][] = node-hr_infographic-group_content_access
 features[field_instance][] = node-hr_infographic-og_group_ref
 features[field_instance][] = node-hr_infographic-title_field
+features[field_instance][] = taxonomy_term-hr_infographic_type-field_acronym
 features[field_instance][] = taxonomy_term-hr_infographic_type-name_field
 features[node][] = hr_infographic
 features[og_features_permission][] = node:hr_bundle:access authoring options of hr_infographic content
