@@ -81,6 +81,18 @@ function hr_infographics_entity_info_alter(&$entity_info) {
  */
 function hr_infographics_search_api_views_query_alter(&$view, &$query) {
   if ($view->name == 'hr_infographics') {
+
+    // Case 4369 - Sort by default by publication date
+    $params = drupal_get_query_parameters($_GET, array(
+      'q',
+      'page'
+    ));
+    $existing = $query->getSort();
+    if (empty($existing) && !isset($params['sort']) && !isset($params['order'])) {
+      // Sort by publication date
+      $query->sort('field_publication_date', 'desc');
+    }
+
     foreach ($query->where as &$condition_group) {
       foreach ($condition_group['conditions'] as &$condition) {
         if (reset($condition) == 'og_group_ref') {
