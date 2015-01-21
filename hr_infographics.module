@@ -107,3 +107,12 @@ function hr_infographics_search_api_views_query_alter(&$view, &$query) {
   }
 }
 
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function hr_infographics_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'restful') {
+    return 'plugins/' . $plugin;
+  }
+}
+
