@@ -13,7 +13,7 @@ function hr_infographics_views_default_views() {
   $view = new view();
   $view->name = 'hr_infographics';
   $view->description = '';
-  $view->tag = 'Documents';
+  $view->tag = 'infographics';
   $view->base_table = 'search_api_index_default_node_index';
   $view->human_name = 'Infographics';
   $view->core = 7;
@@ -56,7 +56,7 @@ function hr_infographics_views_default_views() {
   $handler->display->display_options['fields']['field_infographic_type']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_infographic_type']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_infographic_type']['bypass_access'] = 0;
-  /* Field: Indexed Node: Organization */
+  /* Field: Indexed Node: Managed by */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
@@ -212,7 +212,7 @@ function hr_infographics_views_default_views() {
   $handler->display->display_options['fields']['field_infographic_type']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_infographic_type']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_infographic_type']['bypass_access'] = 0;
-  /* Field: Indexed Node: Organization */
+  /* Field: Indexed Node: Managed by */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
@@ -265,7 +265,7 @@ function hr_infographics_views_default_views() {
     t('There are no results'),
     t('Title'),
     t('Type'),
-    t('Organization'),
+    t('Managed by'),
     t('Publication Date'),
     t('Files'),
     t('All'),
@@ -279,7 +279,7 @@ function hr_infographics_views_default_views() {
   $view = new view();
   $view->name = 'hr_infographics_panes';
   $view->description = '';
-  $view->tag = 'Documents';
+  $view->tag = 'infographics';
   $view->base_table = 'node';
   $view->human_name = 'Infographics Panes';
   $view->core = 7;
@@ -508,7 +508,7 @@ function hr_infographics_views_default_views() {
     147444660 => 0,
   );
   $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['reference_display'] = 'hr_fundings_panes:entityreference_2';
-  $handler->display->display_options['pane_title'] = 'Infographics per space';
+  $handler->display->display_options['pane_title'] = 'Infographics';
   $handler->display->display_options['pane_category']['name'] = 'Infographics';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 'use_pager';
@@ -621,6 +621,86 @@ function hr_infographics_views_default_views() {
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
+
+  /* Display: Infographics from context */
+  $handler = $view->new_display('panel_pane', 'Infographics from context', 'infographics_from_context');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Latest Infographics';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'custom_url';
+  $handler->display->display_options['link_url'] = 'search';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Space(s) (og_group_ref) */
+  $handler->display->display_options['arguments']['og_group_ref_target_id']['id'] = 'og_group_ref_target_id';
+  $handler->display->display_options['arguments']['og_group_ref_target_id']['table'] = 'og_membership';
+  $handler->display->display_options['arguments']['og_group_ref_target_id']['field'] = 'og_group_ref_target_id';
+  $handler->display->display_options['arguments']['og_group_ref_target_id']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['og_group_ref_target_id']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['og_group_ref_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['og_group_ref_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['og_group_ref_target_id']['summary_options']['items_per_page'] = '25';
+  /* Contextual filter: Content: Clusters/Sectors (field_bundles) */
+  $handler->display->display_options['arguments']['field_bundles_target_id']['id'] = 'field_bundles_target_id';
+  $handler->display->display_options['arguments']['field_bundles_target_id']['table'] = 'og_membership';
+  $handler->display->display_options['arguments']['field_bundles_target_id']['field'] = 'field_bundles_target_id';
+  $handler->display->display_options['arguments']['field_bundles_target_id']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['field_bundles_target_id']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_bundles_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_bundles_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_bundles_target_id']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'hr_infographic' => 'hr_infographic',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  $handler->display->display_options['pane_title'] = 'Infographics from context';
+  $handler->display->display_options['pane_category']['name'] = 'Infographics';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['allow']['use_pager'] = 'use_pager';
+  $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 'more_link';
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'field_bundles_target_id' => array(
+      'type' => 'context',
+      'context' => 'entity:node.nid',
+      'context_optional' => 1,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Clusters/Sectors (field_bundles)',
+    ),
+    'og_group_ref_target_id' => array(
+      'type' => 'context',
+      'context' => 'entity:node.nid',
+      'context_optional' => 1,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Group',
+    ),
+  );
   $translatables['hr_infographics_panes'] = array(
     t('Master'),
     t('more'),
@@ -639,20 +719,21 @@ function hr_infographics_views_default_views() {
     t('Themes'),
     t('Type'),
     t('Funding methods'),
-    t('Infographics per space'),
     t('Infographics'),
     t('Thumbnail'),
     t('field collection item from field_files_collection'),
     t('View panes'),
     t('Entity Reference'),
     t('[title] ([og_group_ref])'),
+    t('Infographics from context'),
+    t('Latest Infographics'),
   );
   $export['hr_infographics_panes'] = $view;
 
   $view = new view();
   $view->name = 'hr_infographics_types';
   $view->description = '';
-  $view->tag = 'default';
+  $view->tag = 'infographics';
   $view->base_table = 'taxonomy_term_data';
   $view->human_name = 'Infographics Types';
   $view->core = 7;
