@@ -56,7 +56,7 @@ function hr_infographics_views_default_views() {
   $handler->display->display_options['fields']['field_infographic_type']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_infographic_type']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_infographic_type']['bypass_access'] = 0;
-  /* Field: Indexed Node: Managed by */
+  /* Field: Indexed Node: Lead Agencies */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
@@ -83,7 +83,7 @@ function hr_infographics_views_default_views() {
   $handler->display->display_options['fields']['field_files_collection']['display'] = 'view';
   $handler->display->display_options['fields']['field_files_collection']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_files_collection']['bypass_access'] = 0;
-  /* Contextual filter: Indexed Node: Space(s) */
+  /* Contextual filter: Indexed Node: Groups audience */
   $handler->display->display_options['arguments']['og_group_ref']['id'] = 'og_group_ref';
   $handler->display->display_options['arguments']['og_group_ref']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['og_group_ref']['field'] = 'og_group_ref';
@@ -212,7 +212,7 @@ function hr_infographics_views_default_views() {
   $handler->display->display_options['fields']['field_infographic_type']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_infographic_type']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_infographic_type']['bypass_access'] = 0;
-  /* Field: Indexed Node: Managed by */
+  /* Field: Indexed Node: Lead Agencies */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
@@ -265,7 +265,7 @@ function hr_infographics_views_default_views() {
     t('There are no results'),
     t('Title'),
     t('Type'),
-    t('Managed by'),
+    t('Lead Agencies'),
     t('Publication Date'),
     t('Files'),
     t('All'),
@@ -533,6 +533,13 @@ function hr_infographics_views_default_views() {
 
   /* Display: Thumbnail */
   $handler = $view->new_display('panel_pane', 'Thumbnail', 'thumbnail');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Content: File(s) (field_files_collection) */
   $handler->display->display_options['relationships']['field_files_collection_value']['id'] = 'field_files_collection_value';
@@ -546,7 +553,10 @@ function hr_infographics_views_default_views() {
   $handler->display->display_options['fields']['field_file']['field'] = 'field_file';
   $handler->display->display_options['fields']['field_file']['relationship'] = 'field_files_collection_value';
   $handler->display->display_options['fields']['field_file']['label'] = '';
+  $handler->display->display_options['fields']['field_file']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_file']['alter']['path'] = 'node/!1';
   $handler->display->display_options['fields']['field_file']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_file']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_file']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_file']['type'] = 'file_rendered';
   $handler->display->display_options['fields']['field_file']['settings'] = array(
