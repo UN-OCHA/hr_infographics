@@ -309,7 +309,7 @@ function hr_infographics_panelizer_defaults() {
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'link' => FALSE,
+        'link' => 1,
       ),
       'context' => 'panelizer',
     );
