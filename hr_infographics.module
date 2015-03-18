@@ -119,5 +119,8 @@ function hr_infographics_ctools_plugin_directory($module, $plugin) {
   if ($module == 'restful') {
     return 'plugins/' . $plugin;
   }
+  if ($module == 'ctools' && $plugin == 'content_types') {
+    return 'plugins/' . $plugin;
+  }
 }
 
