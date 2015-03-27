@@ -13,7 +13,7 @@ function hr_infographics_taxonomy_default_vocabularies() {
       'name' => 'Infographic Type',
       'machine_name' => 'hr_infographic_type',
       'description' => '',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
     ),
