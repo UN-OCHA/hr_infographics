@@ -220,10 +220,16 @@ function hr_infographics_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views--exp-hr_infographics-global_master' => array(
+        '35099122474bc9c43a02271db18a15f9' => array(
           'module' => 'views',
-          'delta' => '-exp-hr_infographics-global_master',
+          'delta' => '35099122474bc9c43a02271db18a15f9',
           'region' => 'branding',
+          'weight' => '-10',
+        ),
+        'system-main-menu' => array(
+          'module' => 'system',
+          'delta' => 'main-menu',
+          'region' => 'navigation',
           'weight' => '-10',
         ),
         'search_api_sorts-search-sorts' => array(
@@ -250,48 +256,59 @@ function hr_infographics_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-8',
         ),
+        'facetapi-djs1o6VrivuNykMYeYyvXVKT480Y01tL' => array(
+          'module' => 'facetapi',
+          'delta' => 'djs1o6VrivuNykMYeYyvXVKT480Y01tL',
+          'region' => 'sidebar_first',
+          'weight' => '-7',
+        ),
         'facetapi-3quDa8MFI2Sa9usljzl0qr3fbusfVG93' => array(
           'module' => 'facetapi',
           'delta' => '3quDa8MFI2Sa9usljzl0qr3fbusfVG93',
           'region' => 'sidebar_first',
-          'weight' => '-7',
+          'weight' => '-6',
         ),
         'facetapi-w7XuwcVu1l6DNu4aCenMydri96KBLxYh' => array(
           'module' => 'facetapi',
           'delta' => 'w7XuwcVu1l6DNu4aCenMydri96KBLxYh',
           'region' => 'sidebar_first',
-          'weight' => '-6',
+          'weight' => '-5',
         ),
         'facetapi-uulIYjH3ZtSu9hhI5ARgBYQeEUNqWe17' => array(
           'module' => 'facetapi',
           'delta' => 'uulIYjH3ZtSu9hhI5ARgBYQeEUNqWe17',
           'region' => 'sidebar_first',
-          'weight' => '-5',
+          'weight' => '-4',
         ),
         'facetapi-9GGN5HfHaQpjLAfMWHJknvdGmR74ha9v' => array(
           'module' => 'facetapi',
           'delta' => '9GGN5HfHaQpjLAfMWHJknvdGmR74ha9v',
           'region' => 'sidebar_first',
-          'weight' => '-4',
+          'weight' => '-3',
         ),
         'facetapi-SEcKjZK5tfurGpvrhp6Z9y3447HT7e2S' => array(
           'module' => 'facetapi',
           'delta' => 'SEcKjZK5tfurGpvrhp6Z9y3447HT7e2S',
           'region' => 'sidebar_first',
-          'weight' => '-3',
+          'weight' => '-2',
         ),
         'facetapi-9ew5LitJZ6pWU71gbHp1XW9oAOBwV11z' => array(
           'module' => 'facetapi',
           'delta' => '9ew5LitJZ6pWU71gbHp1XW9oAOBwV11z',
           'region' => 'sidebar_first',
-          'weight' => '-2',
+          'weight' => '-1',
         ),
         'facetapi-ufw6LRur6Vw9VcpuZ4VayzbcSrlX1VMS' => array(
           'module' => 'facetapi',
           'delta' => 'ufw6LRur6Vw9VcpuZ4VayzbcSrlX1VMS',
           'region' => 'sidebar_first',
-          'weight' => '-1',
+          'weight' => '0',
         ),
+      ),
+    ),
+    'disable_context' => array(
+      'disabled' => array(
+        'outside_space' => 'outside_space',
       ),
     ),
   );
@@ -319,10 +336,16 @@ function hr_infographics_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views--exp-hr_infographics-global_table' => array(
+        'ade7fd0a639142c5d84fcf2915cf5990' => array(
           'module' => 'views',
-          'delta' => '-exp-hr_infographics-global_table',
+          'delta' => 'ade7fd0a639142c5d84fcf2915cf5990',
           'region' => 'branding',
+          'weight' => '-10',
+        ),
+        'system-main-menu' => array(
+          'module' => 'system',
+          'delta' => 'main-menu',
+          'region' => 'navigation',
           'weight' => '-10',
         ),
         'current_search-hr_current_search' => array(
@@ -343,48 +366,59 @@ function hr_infographics_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-8',
         ),
+        'facetapi-djs1o6VrivuNykMYeYyvXVKT480Y01tL' => array(
+          'module' => 'facetapi',
+          'delta' => 'djs1o6VrivuNykMYeYyvXVKT480Y01tL',
+          'region' => 'sidebar_first',
+          'weight' => '-7',
+        ),
         'facetapi-3quDa8MFI2Sa9usljzl0qr3fbusfVG93' => array(
           'module' => 'facetapi',
           'delta' => '3quDa8MFI2Sa9usljzl0qr3fbusfVG93',
           'region' => 'sidebar_first',
-          'weight' => '-7',
+          'weight' => '-6',
         ),
         'facetapi-w7XuwcVu1l6DNu4aCenMydri96KBLxYh' => array(
           'module' => 'facetapi',
           'delta' => 'w7XuwcVu1l6DNu4aCenMydri96KBLxYh',
           'region' => 'sidebar_first',
-          'weight' => '-6',
+          'weight' => '-5',
         ),
         'facetapi-uulIYjH3ZtSu9hhI5ARgBYQeEUNqWe17' => array(
           'module' => 'facetapi',
           'delta' => 'uulIYjH3ZtSu9hhI5ARgBYQeEUNqWe17',
           'region' => 'sidebar_first',
-          'weight' => '-5',
+          'weight' => '-4',
         ),
         'facetapi-9GGN5HfHaQpjLAfMWHJknvdGmR74ha9v' => array(
           'module' => 'facetapi',
           'delta' => '9GGN5HfHaQpjLAfMWHJknvdGmR74ha9v',
           'region' => 'sidebar_first',
-          'weight' => '-4',
+          'weight' => '-3',
         ),
         'facetapi-SEcKjZK5tfurGpvrhp6Z9y3447HT7e2S' => array(
           'module' => 'facetapi',
           'delta' => 'SEcKjZK5tfurGpvrhp6Z9y3447HT7e2S',
           'region' => 'sidebar_first',
-          'weight' => '-3',
+          'weight' => '-2',
         ),
         'facetapi-9ew5LitJZ6pWU71gbHp1XW9oAOBwV11z' => array(
           'module' => 'facetapi',
           'delta' => '9ew5LitJZ6pWU71gbHp1XW9oAOBwV11z',
           'region' => 'sidebar_first',
-          'weight' => '-2',
+          'weight' => '-1',
         ),
         'facetapi-ufw6LRur6Vw9VcpuZ4VayzbcSrlX1VMS' => array(
           'module' => 'facetapi',
           'delta' => 'ufw6LRur6Vw9VcpuZ4VayzbcSrlX1VMS',
           'region' => 'sidebar_first',
-          'weight' => '-1',
+          'weight' => '0',
         ),
+      ),
+    ),
+    'disable_context' => array(
+      'disabled' => array(
+        'outside_space' => 'outside_space',
       ),
     ),
   );
