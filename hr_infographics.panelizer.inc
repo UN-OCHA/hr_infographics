@@ -184,6 +184,35 @@ function hr_infographics_panelizer_defaults() {
     $display->content['new-cc62b688-7b0a-4cb7-b9f0-673edf08e990'] = $pane;
     $display->panels['contentmain'][4] = 'new-cc62b688-7b0a-4cb7-b9f0-673edf08e990';
     $pane = new stdClass();
+    $pane->pid = 'new-8f908f20-0293-4e02-aa2d-c233ea22ab82';
+    $pane->panel = 'contentmain';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_data_sources';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'above',
+      'formatter' => 'link_default',
+      'delta_limit' => '0',
+      'delta_offset' => '0',
+      'delta_reversed' => 0,
+      'formatter_settings' => array(),
+      'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 5;
+    $pane->locks = array();
+    $pane->uuid = '8f908f20-0293-4e02-aa2d-c233ea22ab82';
+    $display->content['new-8f908f20-0293-4e02-aa2d-c233ea22ab82'] = $pane;
+    $display->panels['contentmain'][5] = 'new-8f908f20-0293-4e02-aa2d-c233ea22ab82';
+    $pane = new stdClass();
     $pane->pid = 'new-34067174-4f68-4da5-b6ab-620b0318fe6d';
     $pane->panel = 'contentmain';
     $pane->type = 'entity_field';
@@ -205,11 +234,11 @@ function hr_infographics_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 6;
     $pane->locks = array();
     $pane->uuid = '34067174-4f68-4da5-b6ab-620b0318fe6d';
     $display->content['new-34067174-4f68-4da5-b6ab-620b0318fe6d'] = $pane;
-    $display->panels['contentmain'][5] = 'new-34067174-4f68-4da5-b6ab-620b0318fe6d';
+    $display->panels['contentmain'][6] = 'new-34067174-4f68-4da5-b6ab-620b0318fe6d';
     $pane = new stdClass();
     $pane->pid = 'new-5a47c1a9-7199-4891-b139-56f4b8177c1f';
     $pane->panel = 'sidebar';

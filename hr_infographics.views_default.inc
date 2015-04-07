@@ -385,7 +385,7 @@ function hr_infographics_views_default_views() {
   $handler->display->display_options['sorts']['field_publication_date_value']['id'] = 'field_publication_date_value';
   $handler->display->display_options['sorts']['field_publication_date_value']['table'] = 'field_data_field_publication_date';
   $handler->display->display_options['sorts']['field_publication_date_value']['field'] = 'field_publication_date_value';
-  /* Contextual filter: Content: Space(s) (og_group_ref) */
+  /* Contextual filter: Field: Space(s) (og_group_ref) */
   $handler->display->display_options['arguments']['og_group_ref_target_id']['id'] = 'og_group_ref_target_id';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['table'] = 'og_membership';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['field'] = 'og_group_ref_target_id';
@@ -438,7 +438,7 @@ function hr_infographics_views_default_views() {
     'hr_infographic' => 'hr_infographic',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Space(s) (og_group_ref) */
+  /* Filter criterion: Field: Space(s) (og_group_ref) */
   $handler->display->display_options['filters']['og_group_ref_target_id']['id'] = 'og_group_ref_target_id';
   $handler->display->display_options['filters']['og_group_ref_target_id']['table'] = 'og_membership';
   $handler->display->display_options['filters']['og_group_ref_target_id']['field'] = 'og_group_ref_target_id';
@@ -558,7 +558,7 @@ function hr_infographics_views_default_views() {
     147444660 => 0,
   );
   $handler->display->display_options['filters']['field_infographic_type_target_id_entityreference_filter']['reference_display'] = 'hr_infographics_types:entityreference_1';
-  /* Filter criterion: Content: Funding methods (field_funding_methods) (reference filter) */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['id'] = 'field_funding_methods_target_id_entityreference_filter';
   $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['table'] = 'field_data_field_funding_methods';
   $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['field'] = 'field_funding_methods_target_id_entityreference_filter';
@@ -578,7 +578,6 @@ function hr_infographics_views_default_views() {
     229782242 => 0,
     147444660 => 0,
   );
-  $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['reference_display'] = 'hr_fundings_panes:entityreference_2';
   $handler->display->display_options['pane_title'] = 'Infographics';
   $handler->display->display_options['pane_category']['name'] = 'Infographics';
   $handler->display->display_options['pane_category']['weight'] = '0';
@@ -679,7 +678,7 @@ function hr_infographics_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Space(s) */
+  /* Field: Field: Space(s) */
   $handler->display->display_options['fields']['og_group_ref']['id'] = 'og_group_ref';
   $handler->display->display_options['fields']['og_group_ref']['table'] = 'og_membership';
   $handler->display->display_options['fields']['og_group_ref']['field'] = 'og_group_ref';
@@ -717,7 +716,7 @@ function hr_infographics_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Space(s) (og_group_ref) */
+  /* Contextual filter: Field: Space(s) (og_group_ref) */
   $handler->display->display_options['arguments']['og_group_ref_target_id']['id'] = 'og_group_ref_target_id';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['table'] = 'og_membership';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['field'] = 'og_group_ref_target_id';

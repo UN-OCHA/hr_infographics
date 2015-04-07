@@ -32,16 +32,16 @@ function hr_infographics_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '17',
+          'weight' => '19',
         ),
         'redirect' => array(
-          'weight' => '18',
-        ),
-        'flag' => array(
-          'weight' => '10',
+          'weight' => '20',
         ),
         'language' => array(
-          'weight' => '5',
+          'weight' => '0',
+        ),
+        'flag' => array(
+          'weight' => '11',
         ),
       ),
       'display' => array(),
