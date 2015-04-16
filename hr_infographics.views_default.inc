@@ -578,7 +578,7 @@ function hr_infographics_views_default_views() {
     229782242 => 0,
     147444660 => 0,
   );
-  $handler->display->display_options['pane_title'] = 'Infographics';
+  $handler->display->display_options['pane_title'] = 'Dynamic';
   $handler->display->display_options['pane_category']['name'] = 'Infographics';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 'use_pager';

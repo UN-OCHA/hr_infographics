@@ -2,8 +2,8 @@
 
 $plugin = array(
   'single' => TRUE,
-  'title' => t('Key Infographics'),
-  'description' => t('Display key infographics.'),
+  'title' => t('Static'),
+  'description' => t('Chose which infographics you want to display.'),
   'category' => t('Infographics'),
   'edit form' => 'hr_infographics_key_infographics_edit_form',
   'render callback' => 'hr_infographics_key_infographics_render',
