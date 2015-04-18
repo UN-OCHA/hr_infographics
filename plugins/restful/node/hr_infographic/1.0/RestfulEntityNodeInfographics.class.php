@@ -54,6 +54,11 @@ class RestfulEntityNodeInfographics extends \RestfulEntityBaseNode {
       'process_callbacks' => array(array($this, 'getFiles')),
     );
 
+    $public_fields['data_sources'] = array(
+      'property' => 'field_data_sources',
+      'process_callbacks' => array(array($this, 'getDataSources')),
+    );
+
     $public_fields['global_clusters'] = array(
       'property' => 'field_sectors',
       'resource' => array(
@@ -206,6 +211,19 @@ class RestfulEntityNodeInfographics extends \RestfulEntityBaseNode {
         if (!empty($value->field_language)) {
           $tmp->language = $value->field_language[LANGUAGE_NONE][0]['value'];
         }
+        $return[] = $tmp;
+      }
+    }
+    return $return;
+  }
+
+  protected function getDataSources($values) {
+    $return = array();
+    if (!empty($values)) {
+      foreach ($values as $value) {
+        $tmp = new stdClass();
+        $tmp->url = $value['url'];
+        $tmp->title = $value['title'];
         $return[] = $tmp;
       }
     }
