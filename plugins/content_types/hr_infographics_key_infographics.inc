@@ -105,12 +105,14 @@ function hr_infographics_key_infographics_render($subtype, $conf, $panel_args, $
       if (isset($infographic['entity_id'])) {
         $nid = $infographic['entity_id'];
         $node = node_load($nid);
-        if ($conf['view_mode'] == 'link') {
-          $entity = entity_load_single('node', $nid);
-          $block->content .= '<li>'.l(entity_label('node', $entity), 'node/'.$nid).'</li>';
-        }
-        else {
-          $block->content .= drupal_render(node_view($node, $conf['view_mode']));
+        if ($node != FALSE) {
+          if ($conf['view_mode'] == 'link') {
+            $entity = entity_load_single('node', $nid);
+            $block->content .= '<li>'.l(entity_label('node', $entity), 'node/'.$nid).'</li>';
+          }
+          else {
+            $block->content .= drupal_render(node_view($node, $conf['view_mode']));
+          }
         }
       }
     }
