@@ -560,26 +560,6 @@ function hr_infographics_views_default_views() {
     147444660 => 0,
   );
   $handler->display->display_options['filters']['field_infographic_type_target_id_entityreference_filter']['reference_display'] = 'hr_infographics_types:entityreference_1';
-  /* Filter criterion: Broken/missing handler */
-  $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['id'] = 'field_funding_methods_target_id_entityreference_filter';
-  $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['table'] = 'field_data_field_funding_methods';
-  $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['field'] = 'field_funding_methods_target_id_entityreference_filter';
-  $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['group'] = 1;
-  $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['expose']['operator_id'] = 'field_funding_methods_target_id_entityreference_filter_op';
-  $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['expose']['label'] = 'Funding methods';
-  $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['expose']['operator'] = 'field_funding_methods_target_id_entityreference_filter_op';
-  $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['expose']['identifier'] = 'field_funding_methods_target_id_entityreference_filter';
-  $handler->display->display_options['filters']['field_funding_methods_target_id_entityreference_filter']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    30037204 => 0,
-    200153887 => 0,
-    188284353 => 0,
-    235660466 => 0,
-    229782242 => 0,
-    147444660 => 0,
-  );
   $handler->display->display_options['pane_title'] = 'Dynamic';
   $handler->display->display_options['pane_category']['name'] = 'Infographics';
   $handler->display->display_options['pane_category']['weight'] = '0';
@@ -717,6 +697,17 @@ function hr_infographics_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Publication Date (field_publication_date) */
+  $handler->display->display_options['sorts']['field_publication_date_value']['id'] = 'field_publication_date_value';
+  $handler->display->display_options['sorts']['field_publication_date_value']['table'] = 'field_data_field_publication_date';
+  $handler->display->display_options['sorts']['field_publication_date_value']['field'] = 'field_publication_date_value';
+  $handler->display->display_options['sorts']['field_publication_date_value']['order'] = 'DESC';
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Field: Space(s) (og_group_ref) */
   $handler->display->display_options['arguments']['og_group_ref_target_id']['id'] = 'og_group_ref_target_id';
